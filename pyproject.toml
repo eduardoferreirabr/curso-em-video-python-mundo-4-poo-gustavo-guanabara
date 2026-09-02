@@ -1,0 +1,17 @@
+[project]
+name = "curso-em-video-python-poo-gustavo-guanabara"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "eduardoferreirabr", email = "eduardociviluff@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+curso-em-video-python-poo-gustavo-guanabara = "curso_em_video_python_poo_gustavo_guanabara:main"
+
+[build-system]
+requires = ["uv_build>=0.12.7,<0.13.0"]
+build-backend = "uv_build"
