@@ -7,7 +7,9 @@ authors = [
     { name = "eduardoferreirabr", email = "eduardociviluff@gmail.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "rich>=15.0.0",
+]
 
 [project.scripts]
 curso-em-video-python-poo-gustavo-guanabara = "curso_em_video_python_poo_gustavo_guanabara:main"
