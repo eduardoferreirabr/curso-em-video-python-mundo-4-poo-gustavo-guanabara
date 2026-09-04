@@ -1,5 +1,5 @@
 [project]
-name = "curso-em-video-python-poo-gustavo-guanabara"
+name = "curso-em-video-python-mundo-4-poo-gustavo-guanabara"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -12,7 +12,7 @@ dependencies = [
 ]
 
 [project.scripts]
-curso-em-video-python-poo-gustavo-guanabara = "curso_em_video_python_poo_gustavo_guanabara:main"
+curso-em-video-python-mundo-4-poo-gustavo-guanabara = "curso_em_video_python_mundo_4_poo_gustavo_guanabara:main"
 
 [build-system]
 requires = ["uv_build>=0.12.7,<0.13.0"]
