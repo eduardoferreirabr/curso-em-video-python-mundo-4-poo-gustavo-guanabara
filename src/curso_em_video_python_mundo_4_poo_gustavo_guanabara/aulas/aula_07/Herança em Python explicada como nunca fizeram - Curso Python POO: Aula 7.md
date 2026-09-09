@@ -30,7 +30,7 @@
 
 ---
 
-## Fase 07 - Melhorando nossa classes
+## Fase 07 - Mecanismo de Herança em POO - Parte 1
 
 ### Os 4 pilares da Programação Orientada a Objetos
 
@@ -69,10 +69,9 @@ class Pessoa:
     def __init__(self, nome="", idade=0):
         self.nome = nome
         self.idade = idade
-    
+
     def fazer_aniversário(self):
         self.idade += 1
-
 ```
 ```python
 class Aluno(Pessoa):
