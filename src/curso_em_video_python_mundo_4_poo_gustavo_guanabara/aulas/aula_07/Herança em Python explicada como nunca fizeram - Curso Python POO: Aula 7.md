@@ -41,28 +41,67 @@
 
 ### Herança
 
-Herança é um relacionamento entre itens gerais (ancestrais) e tipos específicos (descendentes) desse itens, que herdam atributos e métodos dos níveis superiores.
+Herança é um relacionamento entre **itens gerais** (ancestrais) e **tipos específicos** (descendentes) desses itens, que herdam **atributos** e **métodos** dos níveis superiores.
 
-**Principais vantagens:**
-- reutilização de código
-- organização hierárquica
-- facilita manuntenção
-- extensibilidade
-- suporte a polimorfismo
+#### Principais vantagens:
 
-**Superclasse**
-- classe base
-- ancestral
-- classe mãe
+- Reutilização de código
+- Organização hierárquica
+- Facilita manuntenção
+- Extensibilidade
+- Suporte a polimorfismo
 
-**Herança**
-- generalização
-- relação do tipo "é UM"
+#### Superclasse
 
-**Subclasse**
-- classe derivada
-- descendente
-- classe filha
+- Classe base
+- Ancestral
+- Classe mãe
+
+#### Herança
+
+- Generalização
+- Relação do tipo "é UM"
+
+#### Subclasse
+
+- Classe derivada
+- Descendente
+- Classe filha
+
+```mermaid
+classDiagram
+
+    class Pessoa {
+        + nome
+        + idade
+        + fazer_aniversário()
+    }
+
+    class Aluno {
+        + curso
+        + turma
+        + fazer_aniversario()
+
+    }
+
+    class Professor {
+        + especialidade
+        + nivel
+        + dar_aula()
+    }
+
+    class Funcionario {
+        + cargo
+        + setor
+        + bater_ponto()
+    }
+
+    Pessoa <|-- Aluno
+    Pessoa <|-- Professor
+    Pessoa <|-- Funcionario
+```
+
+### Como faço isso em código Python?
 
 ```python
 class Pessoa:
@@ -73,6 +112,7 @@ class Pessoa:
     def fazer_aniversário(self):
         self.idade += 1
 ```
+
 ```python
 class Aluno(Pessoa):
     def __init__(self, nome, idade, curso, turma):
@@ -83,6 +123,7 @@ class Aluno(Pessoa):
     def fazer_matricula(self):
         print(f"{self.nome} acabou de fazer matrícula")
 ```
+
 ```python
 class Professor(Pessoa):
     def __init__(self, nome, idade, especialidade, nivel):
@@ -93,6 +134,7 @@ class Professor(Pessoa):
     def dar_aula(self):
         print(f"{self.nome} começou a dar aula")
 ```
+
 ```python
 class Funcionario(Pessoa):
     def __init__(self, nome, idade, cargo, setor):
