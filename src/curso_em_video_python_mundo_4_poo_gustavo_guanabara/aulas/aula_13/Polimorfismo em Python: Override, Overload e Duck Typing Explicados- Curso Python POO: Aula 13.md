@@ -100,6 +100,8 @@ classDiagram
 
 ```
 
+---
+
 ### Tipos de Polimorfismo
 
 - Inclusão (Override / Subtyping)
@@ -115,6 +117,8 @@ classDiagram
 > O Python só suporta os tipos de polimorfismo **Inclusão** e **Sobrecarga**.
 
 - Método Polimórfico - Duck Typing
+
+---
 
 ### Polimorfismo - Inclusão (Override)
 
