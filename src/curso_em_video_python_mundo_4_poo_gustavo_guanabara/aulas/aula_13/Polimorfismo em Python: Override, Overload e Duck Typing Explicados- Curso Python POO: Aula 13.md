@@ -116,5 +116,24 @@ classDiagram
 
 - Método Polimórfico - Duck Typing
 
-### Polimorfismo - Inclusão
+### Polimorfismo - Inclusão (Override)
 
+```mermaid
+classDiagram
+
+    class Mae {
+        + nome
+        + fazer_pudim()
+        + fritar_coxinha()
+    }
+    class Filha {
+        + fazer_pudim()
+    }
+    class Filho {
+        + fritar_coxinha()
+    }
+    
+    Mae <|-- Filha
+    Mae <|-- Filho
+
+```
