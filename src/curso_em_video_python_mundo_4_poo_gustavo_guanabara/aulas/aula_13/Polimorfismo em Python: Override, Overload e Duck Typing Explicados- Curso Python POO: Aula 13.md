@@ -114,6 +114,8 @@ classDiagram
 
 - Paramétrico (Template / Generic)
 
+---
+
 > O Python só suporta os tipos de polimorfismo **Inclusão** e **Sobrecarga**.
 
 - Método Polimórfico - Duck Typing
