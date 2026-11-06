@@ -100,7 +100,7 @@ classDiagram
         <<Classe Especializada>>
         + curso
         + turma
-        + fazer_aniversario()
+        + fazer_matricula()
 
     }
 
