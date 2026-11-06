@@ -71,7 +71,7 @@ Ex.: Quando você vai tomar um remédio.. Qual é o **objetivo** em usar uma **c
 ### Principais vantagens:
 
 - segurança e controle
-- facilidade e manutenção
+- facilidade de manutenção
 - flexibilidade e reutilização
 - redução de efeitos colaterais
 
