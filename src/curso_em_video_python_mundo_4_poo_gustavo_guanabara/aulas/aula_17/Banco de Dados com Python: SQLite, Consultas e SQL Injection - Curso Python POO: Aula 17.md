@@ -78,32 +78,24 @@ flowchart TD
 
 ### Problema do cursor.fecthall()
  
+
 ```mermaid
-flowchart TD
-    A["👤 Você<br/>Python"]
+flowchart BT
+    D[("🗄️ Banco de dados<br/>Disco<br/><br/>1 João<br/>2 Maria<br/>3 Pedro<br/>4 Ana<br/>⋮")]
 
-    B["📦 Módulo<br/>sqlite3"]
+    F["📦 Transporte dos dados<br/>cur.fetchall()"]
 
-    C["🔌 Conexão<br/>sqlite3.connect()"]
+    M["🧠 Memória Principal<br/>RAM<br/><br/>1 João<br/>2 Maria<br/>3 Pedro<br/>4 Ana<br/>⋮"]
 
-    D["🖱️ Cursor<br/>connection.cursor()"]
+    D -->|"Lê os registros"| F
+    F -->|"Carrega na memória"| M
 
-    E[("🗄️ Banco de dados<br/>SQLite")]
-
-    A -->|Importa e utiliza| B
-    B -->|Estabelece conexão| C
-    C -->|Cria cursor| D
-    D <-->|Executa comandos SQL| E
-
-    classDef user fill:#2563eb,color:#fff,stroke:#1d4ed8
-    classDef module fill:#b77945,color:#fff,stroke:#854d2e
-    classDef connection fill:#e9a23b,color:#222,stroke:#c47b16
-    classDef cursor fill:#64748b,color:#fff,stroke:#475569
     classDef database fill:#3156b5,color:#fff,stroke:#1e3a8a
+    classDef function fill:#e9a23b,color:#222,stroke:#c47b16
+    classDef memory fill:#16a34a,color:#fff,stroke:#166534
 
-    class A user
-    class B module
-    class C connection
-    class D cursor
-    class E database
+    class D database
+    class F function
+    class M memory
+
 ```
