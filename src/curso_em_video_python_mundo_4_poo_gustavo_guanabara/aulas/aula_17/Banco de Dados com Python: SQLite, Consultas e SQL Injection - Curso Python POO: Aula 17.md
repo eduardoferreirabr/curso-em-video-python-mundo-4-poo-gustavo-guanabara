@@ -41,3 +41,34 @@
 ---
 
 ## Fase 17 - Acesso SQLite via Python - Parte 2
+
+```mermaid
+flowchart TD
+    A["👤 Você<br/>Python"]
+
+    B["📦 Módulo<br/>sqlite3"]
+
+    C["🔌 Conexão<br/>sqlite3.connect()"]
+
+    D["🖱️ Cursor<br/>connection.cursor()"]
+
+    E[("🗄️ Banco de dados<br/>SQLite")]
+
+    A -->|Importa e utiliza| B
+    B -->|Estabelece conexão| C
+    C -->|Cria cursor| D
+    D <-->|Executa comandos SQL| E
+
+    classDef user fill:#2563eb,color:#fff,stroke:#1d4ed8
+    classDef module fill:#b77945,color:#fff,stroke:#854d2e
+    classDef connection fill:#e9a23b,color:#222,stroke:#c47b16
+    classDef cursor fill:#64748b,color:#fff,stroke:#475569
+    classDef database fill:#3156b5,color:#fff,stroke:#1e3a8a
+
+    class A user
+    class B module
+    class C connection
+    class D cursor
+    class E database
+```
+
