@@ -1,5 +1,7 @@
+# Desafio 016
 # crie a classe Funcionario, onde podemos cadastrar nome, setor e cargo.
 # crie também um método que permita ao funcionário se apresentar.
+
 from rich import inspect
 
 
