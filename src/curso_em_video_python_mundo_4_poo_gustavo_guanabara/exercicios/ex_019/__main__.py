@@ -16,6 +16,8 @@ def exibir_menu():
 
 def main():
 
+    # cadastro_em_massa() [IMPORTANTE] Execute apenas uma vez
+
     if not criar_banco():
         print("Algum problema aconteceu ao criar o banco.")
         raise SystemExit
@@ -27,23 +29,23 @@ def main():
         match opcao:
             case "1":  # cadastrar pessoa
                 if not cadastrar_pessoa():
-                    print("\n[ERRO] Não foi possível cadastrar a pessoa.")
+                    print("[ERRO] Não foi possível cadastrar a pessoa.")
 
             case "2":  # listar pessoas
                 if not listar_pessoa():
-                    print("\n[ERRO] Não foi possível listar as pessoas.")
+                    print("[ERRO] Não foi possível listar as pessoas.")
 
             case "3":  # atualizar pessoa
                 if not atualizar_pessoa():
-                    print("\n[ERRO] Não foi possível atualizar a pessoa.")
+                    print("[ERRO] Não foi possível atualizar a pessoa.")
 
             case "4":  # excluir pessoa
                 if not excluir_pessoa():
-                    print("\n[ERRO] Não foi possível excluir a pessoa.")
+                    print("[ERRO] Não foi possível excluir a pessoa.")
 
             case "5":  # busca por nome
                 if not buscar_pessoa_por_nome():
-                    print("\n[ERRO] Não foi possível buscar a pessoa.")
+                    print("[ERRO] Não foi possível buscar a pessoa.")
 
             case "0":  # sair
                 print("\nEncerrando o sistema...")
