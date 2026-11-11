@@ -71,7 +71,7 @@ Ex.: Quando você vai tomar um remédio.. Qual é o **objetivo** em usar uma **c
 ### Principais vantagens:
 
 - segurança e controle
-- facilidade e manutenção
+- facilidade de manutenção
 - flexibilidade e reutilização
 - redução de efeitos colaterais
 
@@ -86,7 +86,7 @@ Ex.: Quando você vai tomar um remédio.. Qual é o **objetivo** em usar uma **c
 
 ### Visibilidade
 
-Existem **três tipos** de **visibilidade** para atributos em linnguagem **POO**:
+Existem **três tipos** de **visibilidade** para atributos em linguagens **POO**:
 
 - public +
 - protected #
@@ -201,3 +201,24 @@ Liberdade com responsabilidade!
 
 ## Privado
 \- __atrib3
+
+```mermaid
+classDiagram
+
+
+        class A {
+            + atrib1
+            # _atrib2
+            - __atrib3
+        }
+
+        class B
+        class C
+
+    note for public "<b>main</b><br/>a = A()<br/>b = B()<br/>c = C()"
+
+
+    A <|-- B
+    A <|-- C
+
+```

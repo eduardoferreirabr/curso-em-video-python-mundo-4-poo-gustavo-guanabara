@@ -1,0 +1,101 @@
+# Fase 17
+
+## Tópicos abordados na Aula
+
+- 00:00 – O que vamos aprender sobre acesso a bancos de dados
+- 01:19 – Apresentação da Aula 17 e preparação para o exercício
+- 02:12 – Curso de Python também disponível no Estudonauta
+- 03:25 – Como funciona o acesso a um banco de dados
+- 04:25 – SQLite3, conexão e cursor: os conceitos fundamentais
+- 05:41 – Preparando o banco de dados no PyCharm
+- 07:17 – Criando o arquivo Python para acessar o banco
+- 08:17 – Executando consultas SQL com SELECT
+- 09:15 – Recuperando registros com fetchall()
+- 11:01 – O problema do consumo de memória com fetchall()
+- 12:55 – Como buscar registros individualmente com fetchone()
+- 14:45 – Percorrendo os resultados com o laço for
+- 15:53 – Acessando os campos das tuplas e formatando os resultados
+- 17:09 – Utilizando sqlite3.Row para acessar campos pelo nome
+- 18:38 – Boas práticas: gerenciando recursos com with
+- 20:40 – Tratamento de erros no acesso ao banco de dados
+- 24:34 – Criando uma busca de amigos pelo nome
+- 27:49 – O que é SQL Injection e como proteger as consultas
+- 30:02 – Contando os resultados encontrados com enumerate()
+- 32:03 – Resumo da aula e apresentação do Desafio 41
+- 33:07 – Desafio 41: mensagens para buscas sem resultados
+- 33:33 – Como tratar datas inválidas e vazias
+- 33:55 – Formatando datas e calculando a idade real
+- 34:26 – Recapitulando os requisitos do desafio
+- 35:21 – Encerramento e preparação para a próxima resolução
+
+---
+
+## Perguntas:
+
+- Como **abrir** um **banco sqlite** no **Python**?
+- Quais são as **boas práticas** para **acesso**?
+- Como **obter registros** de uma **tabela**?
+- Como **evitar** consumo excessivo de **memória**?
+- Como **formatar** uma **data**?
+
+---
+
+## Fase 17 - Acesso SQLite via Python - Parte 2
+
+### Conexão com Banco de Dados
+
+```mermaid
+flowchart TD
+    A["👤 Você<br/>Python"]
+
+    B["📦 Módulo<br/>sqlite3"]
+
+    C["🔌 Conexão<br/>sqlite3.connect()"]
+
+    D["🖱️ Cursor<br/>connection.cursor()"]
+
+    E[("🗄️ Banco de dados<br/>SQLite")]
+
+    A -->|Importa e utiliza| B
+    B -->|Estabelece conexão| C
+    C -->|Cria cursor| D
+    D <-->|Executa comandos SQL| E
+
+    classDef user fill:#2563eb,color:#fff,stroke:#1d4ed8
+    classDef module fill:#b77945,color:#fff,stroke:#854d2e
+    classDef connection fill:#e9a23b,color:#222,stroke:#c47b16
+    classDef cursor fill:#64748b,color:#fff,stroke:#475569
+    classDef database fill:#3156b5,color:#fff,stroke:#1e3a8a
+
+    class A user
+    class B module
+    class C connection
+    class D cursor
+    class E database
+```
+
+---
+
+### Problema do cursor.fecthall()
+ 
+
+```mermaid
+flowchart BT
+    D[("🗄️ Banco de dados<br/>Disco<br/><br/>1 João<br/>2 Maria<br/>3 Pedro<br/>4 Ana<br/>⋮")]
+
+    F["📦 Transporte dos dados<br/>cur.fetchall()"]
+
+    M["🧠 Memória Principal<br/>RAM<br/><br/>1 João<br/>2 Maria<br/>3 Pedro<br/>4 Ana<br/>⋮"]
+
+    D -->|"Lê os registros"| F
+    F -->|"Carrega na memória"| M
+
+    classDef database fill:#3156b5,color:#fff,stroke:#1e3a8a
+    classDef function fill:#e9a23b,color:#222,stroke:#c47b16
+    classDef memory fill:#16a34a,color:#fff,stroke:#166534
+
+    class D database
+    class F function
+    class M memory
+
+```

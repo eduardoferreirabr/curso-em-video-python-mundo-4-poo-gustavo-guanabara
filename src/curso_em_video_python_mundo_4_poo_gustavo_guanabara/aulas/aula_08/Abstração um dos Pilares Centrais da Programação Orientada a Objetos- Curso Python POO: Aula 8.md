@@ -38,7 +38,7 @@
 - O que é **abstração**?
 - O que é **interface pública**?
 - O que é uma **classe abstrata**?
-- O que é um **método abstrato**?
+- O que é um **método abstrato** e um **método concreto**?
 - Você conhece as siglas **ABC** e **DRY**?
 
 ---
@@ -100,7 +100,7 @@ classDiagram
         <<Classe Especializada>>
         + curso
         + turma
-        + fazer_aniversario()
+        + fazer_matricula()
 
     }
 
